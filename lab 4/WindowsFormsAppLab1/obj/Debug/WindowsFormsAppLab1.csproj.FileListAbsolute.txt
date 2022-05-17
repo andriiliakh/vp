@@ -1,0 +1,44 @@
+D:\User\WorkingFolder\University\VisualProgramming\WindowsFormsAppLab1\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.exe.config
+D:\User\WorkingFolder\University\VisualProgramming\WindowsFormsAppLab1\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.exe
+D:\User\WorkingFolder\University\VisualProgramming\WindowsFormsAppLab1\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.pdb
+D:\User\WorkingFolder\University\VisualProgramming\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.AssemblyReference.cache
+D:\User\WorkingFolder\University\VisualProgramming\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.SuggestedBindingRedirects.cache
+D:\User\WorkingFolder\University\VisualProgramming\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.Form1.resources
+D:\User\WorkingFolder\University\VisualProgramming\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.Properties.Resources.resources
+D:\User\WorkingFolder\University\VisualProgramming\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.GenerateResource.cache
+D:\User\WorkingFolder\University\VisualProgramming\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.CoreCompileInputs.cache
+D:\User\WorkingFolder\University\VisualProgramming\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.exe
+D:\User\WorkingFolder\University\VisualProgramming\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.pdb
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.exe.config
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.exe
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.pdb
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.AssemblyReference.cache
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.Form1.resources
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.Properties.Resources.resources
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.GenerateResource.cache
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.CoreCompileInputs.cache
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.exe
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.pdb
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.exe.config
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.exe
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.pdb
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.AssemblyReference.cache
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.Form1.resources
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.Properties.Resources.resources
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.GenerateResource.cache
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.CoreCompileInputs.cache
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.exe
+C:\Users\Mak\Desktop\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.pdb
+C:\Users\Andrewsha\Desktop\vp\lab 4\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.exe.config
+C:\Users\Andrewsha\Desktop\vp\lab 4\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.exe
+C:\Users\Andrewsha\Desktop\vp\lab 4\WindowsFormsAppLab1\bin\Debug\WindowsFormsAppLab1.pdb
+C:\Users\Andrewsha\Desktop\vp\lab 4\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.AssemblyReference.cache
+C:\Users\Andrewsha\Desktop\vp\lab 4\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Andrewsha\Desktop\vp\lab 4\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.Form1.resources
+C:\Users\Andrewsha\Desktop\vp\lab 4\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.Properties.Resources.resources
+C:\Users\Andrewsha\Desktop\vp\lab 4\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.GenerateResource.cache
+C:\Users\Andrewsha\Desktop\vp\lab 4\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.csproj.CoreCompileInputs.cache
+C:\Users\Andrewsha\Desktop\vp\lab 4\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.exe
+C:\Users\Andrewsha\Desktop\vp\lab 4\WindowsFormsAppLab1\obj\Debug\WindowsFormsAppLab1.pdb
