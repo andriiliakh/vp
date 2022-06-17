@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CreditsDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="AccountNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TaxCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LegalAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ActualAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChiefInitials" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Rating" Type="Double" />
+    <NavigationProperty Name="Credits" Relationship="Self.FK__Credits__ClientI__38996AB5" FromRole="Clients" ToRole="Credits" />
+  </EntityType>
+  <EntityType Name="Credits">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ClientId" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
+    <Property Name="Duration" Type="Int32" Nullable="false" />
+    <Property Name="AnnualInterestRate" Type="Double" Nullable="false" />
+    <Property Name="Pledge" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK__Credits__ClientI__38996AB5" FromRole="Credits" ToRole="Clients" />
+    <NavigationProperty Name="PaymentSchedule" Relationship="Self.FK__PaymentSc__Credi__3B75D760" FromRole="Credits" ToRole="PaymentSchedule" />
+  </EntityType>
+  <EntityType Name="PaymentSchedule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CreditId" Type="Int32" Nullable="false" />
+    <Property Name="PaymentDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Amount" Type="Double" Nullable="false" />
+    <Property Name="InterestRate" Type="Double" Nullable="false" />
+    <Property Name="IsPaid" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Credits" Relationship="Self.FK__PaymentSc__Credi__3B75D760" FromRole="PaymentSchedule" ToRole="Credits" />
+  </EntityType>
+  <Association Name="FK__Credits__ClientI__38996AB5">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Credits" Type="Self.Credits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Credits">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PaymentSc__Credi__3B75D760">
+    <End Role="Credits" Type="Self.Credits" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PaymentSchedule" Type="Self.PaymentSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Credits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PaymentSchedule">
+        <PropertyRef Name="CreditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CreditsDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="Self.Clients" />
+    <EntitySet Name="Credits" EntityType="Self.Credits" />
+    <EntitySet Name="PaymentSchedule" EntityType="Self.PaymentSchedule" />
+    <AssociationSet Name="FK__Credits__ClientI__38996AB5" Association="Self.FK__Credits__ClientI__38996AB5">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Credits" EntitySet="Credits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PaymentSc__Credi__3B75D760" Association="Self.FK__PaymentSc__Credi__3B75D760">
+      <End Role="Credits" EntitySet="Credits" />
+      <End Role="PaymentSchedule" EntitySet="PaymentSchedule" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

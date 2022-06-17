@@ -1,0 +1,32 @@
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\bin\Debug\Credit.exe.config
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\bin\Debug\Credit.exe
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\bin\Debug\Credit.pdb
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\bin\Debug\EntityFramework.dll
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\bin\Debug\EntityFramework.xml
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\obj\Debug\Credit.csproj.AssemblyReference.cache
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\obj\Debug\Credit.csproj.SuggestedBindingRedirects.cache
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\obj\Debug\Credit.Form1.resources
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\obj\Debug\Credit.Properties.Resources.resources
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\obj\Debug\Credit.csproj.GenerateResource.cache
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\obj\Debug\Credit.csproj.CoreCompileInputs.cache
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\obj\Debug\Credit.csproj.CopyComplete
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\obj\Debug\Credit.exe
+C:\Users\MYKYTA\Desktop\Sem 6\курсова\Андрій\Credit\Credit\obj\Debug\Credit.pdb
+C:\Users\Andrewsha\Desktop\Credit\Credit\bin\Debug\Credit.exe.config
+C:\Users\Andrewsha\Desktop\Credit\Credit\bin\Debug\Credit.exe
+C:\Users\Andrewsha\Desktop\Credit\Credit\bin\Debug\Credit.pdb
+C:\Users\Andrewsha\Desktop\Credit\Credit\bin\Debug\EntityFramework.dll
+C:\Users\Andrewsha\Desktop\Credit\Credit\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andrewsha\Desktop\Credit\Credit\bin\Debug\EntityFramework.xml
+C:\Users\Andrewsha\Desktop\Credit\Credit\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Andrewsha\Desktop\Credit\Credit\obj\Debug\Credit.csproj.AssemblyReference.cache
+C:\Users\Andrewsha\Desktop\Credit\Credit\obj\Debug\Credit.csproj.SuggestedBindingRedirects.cache
+C:\Users\Andrewsha\Desktop\Credit\Credit\obj\Debug\Credit.Form1.resources
+C:\Users\Andrewsha\Desktop\Credit\Credit\obj\Debug\Credit.Properties.Resources.resources
+C:\Users\Andrewsha\Desktop\Credit\Credit\obj\Debug\Credit.csproj.GenerateResource.cache
+C:\Users\Andrewsha\Desktop\Credit\Credit\obj\Debug\Credit.csproj.CoreCompileInputs.cache
+C:\Users\Andrewsha\Desktop\Credit\Credit\obj\Debug\Credit.csproj.CopyComplete
+C:\Users\Andrewsha\Desktop\Credit\Credit\obj\Debug\Credit.exe
+C:\Users\Andrewsha\Desktop\Credit\Credit\obj\Debug\Credit.pdb

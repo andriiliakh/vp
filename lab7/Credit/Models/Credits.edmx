@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CreditsDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="AccountNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TaxCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LegalAddress" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ActualAddress" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ChiefInitials" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Rating" Type="float" />
+          <Property Name="LastUpdated" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Credits">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="ClientId" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="Amount" Type="float" Nullable="false" />
+          <Property Name="Duration" Type="int" Nullable="false" />
+          <Property Name="AnnualInterestRate" Type="float" Nullable="false" />
+          <Property Name="Pledge" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="LastUpdated" Type="date" Nullable="false" />
+          <Property Name="IsOutdated" Type="bit" />
+        </EntityType>
+        <EntityType Name="PaymentSchedule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CreditId" Type="int" Nullable="false" />
+          <Property Name="PaymentDate" Type="date" Nullable="false" />
+          <Property Name="Amount" Type="float" Nullable="false" />
+          <Property Name="InterestRate" Type="float" Nullable="false" />
+          <Property Name="IsPaid" Type="bit" Nullable="false" />
+          <Property Name="LastUpdated" Type="date" />
+        </EntityType>
+        <Association Name="FK__Credits__ClientI__38996AB5">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Credits" Type="Self.Credits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Credits">
+              <PropertyRef Name="ClientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PaymentSc__Credi__3B75D760">
+          <End Role="Credits" Type="Self.Credits" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PaymentSchedule" Type="Self.PaymentSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Credits">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PaymentSchedule">
+              <PropertyRef Name="CreditId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CreditsDbModelStoreContainer">
+          <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Credits" EntityType="Self.Credits" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentSchedule" EntityType="Self.PaymentSchedule" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Credits__ClientI__38996AB5" Association="Self.FK__Credits__ClientI__38996AB5">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Credits" EntitySet="Credits" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PaymentSc__Credi__3B75D760" Association="Self.FK__PaymentSc__Credi__3B75D760">
+            <End Role="Credits" EntitySet="Credits" />
+            <End Role="PaymentSchedule" EntitySet="PaymentSchedule" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CreditsDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="AccountNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TaxCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LegalAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ActualAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ChiefInitials" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Rating" Type="Double" />
+          <NavigationProperty Name="Credits" Relationship="Self.FK__Credits__ClientI__38996AB5" FromRole="Clients" ToRole="Credits" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="Credits">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="ClientId" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Amount" Type="Double" Nullable="false" />
+          <Property Name="Duration" Type="Int32" Nullable="false" />
+          <Property Name="AnnualInterestRate" Type="Double" Nullable="false" />
+          <Property Name="Pledge" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="Self.FK__Credits__ClientI__38996AB5" FromRole="Credits" ToRole="Clients" />
+          <NavigationProperty Name="PaymentSchedule" Relationship="Self.FK__PaymentSc__Credi__3B75D760" FromRole="Credits" ToRole="PaymentSchedule" />
+          <Property Name="LastUpdated" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IsOutdated" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="PaymentSchedule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CreditId" Type="Int32" Nullable="false" />
+          <Property Name="PaymentDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Amount" Type="Double" Nullable="false" />
+          <Property Name="InterestRate" Type="Double" Nullable="false" />
+          <Property Name="IsPaid" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Credits" Relationship="Self.FK__PaymentSc__Credi__3B75D760" FromRole="PaymentSchedule" ToRole="Credits" />
+          <Property Name="LastUpdated" Type="DateTime" Precision="0" />
+        </EntityType>
+        <Association Name="FK__Credits__ClientI__38996AB5">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Credits" Type="Self.Credits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Credits">
+              <PropertyRef Name="ClientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PaymentSc__Credi__3B75D760">
+          <End Role="Credits" Type="Self.Credits" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PaymentSchedule" Type="Self.PaymentSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Credits">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PaymentSchedule">
+              <PropertyRef Name="CreditId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CreditsDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clients" EntityType="Self.Clients" />
+          <EntitySet Name="Credits" EntityType="Self.Credits" />
+          <EntitySet Name="PaymentSchedule" EntityType="Self.PaymentSchedule" />
+          <AssociationSet Name="FK__Credits__ClientI__38996AB5" Association="Self.FK__Credits__ClientI__38996AB5">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="Credits" EntitySet="Credits" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PaymentSc__Credi__3B75D760" Association="Self.FK__PaymentSc__Credi__3B75D760">
+            <End Role="Credits" EntitySet="Credits" />
+            <End Role="PaymentSchedule" EntitySet="PaymentSchedule" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CreditsDbModelStoreContainer" CdmEntityContainer="CreditsDbEntities">
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="CreditsDbModel.Clients">
+              <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+                <ScalarProperty Name="LegalAddress" ColumnName="LegalAddress" />
+                <ScalarProperty Name="ActualAddress" ColumnName="ActualAddress" />
+                <ScalarProperty Name="ChiefInitials" ColumnName="ChiefInitials" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Credits">
+            <EntityTypeMapping TypeName="CreditsDbModel.Credits">
+              <MappingFragment StoreEntitySet="Credits">
+                <ScalarProperty Name="IsOutdated" ColumnName="IsOutdated" />
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="AnnualInterestRate" ColumnName="AnnualInterestRate" />
+                <ScalarProperty Name="Pledge" ColumnName="Pledge" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentSchedule">
+            <EntityTypeMapping TypeName="CreditsDbModel.PaymentSchedule">
+              <MappingFragment StoreEntitySet="PaymentSchedule">
+                <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreditId" ColumnName="CreditId" />
+                <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+                <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
